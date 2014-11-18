@@ -1,0 +1,54 @@
+---
+title: "For Fun"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: true
+    theme: journal
+    number_sections: true
+  pdf_document:
+    toc: true
+    number_sections: true
+    includes:
+            in_header: preambleish.sty
+  word_document:
+    fig_width: 5
+    fig_height: 5
+    fig_caption: true
+---
+
+```{r, echo=FALSE}
+out_type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+```
+
+## Out Type
+
+```{r, echo=FALSE}
+print(out_type)
+```
+
+
+## Good times
+
+```{r, results='asis', echo=FALSE}
+switch(out_type,
+    html = {cat('<iframe width="640" height="390" src="https://www.youtube.com/embed/FnblmZdTbYs?    feature=player_detailpage" frameborder="0" allowfullscreen></iframe>')},
+    docx = cat("https://www.youtube.com/watch?v=ekBJgsfKnlw"),
+	latex = cat("\\begin{figure}[!ht]
+  \\centering
+\\includemedia[
+  width=0.6\\linewidth,height=0.45\\linewidth,
+  activate=pageopen,
+  flashvars={
+    modestbranding=1 % no YT logo in control bar
+   &autohide=1       % controlbar autohide 
+   &showinfo=0       % no title and other info before start 
+  } 
+]{}{http://www.youtube.com/v/ekBJgsfKnlw?rel=0}   % Flash file 
+  \\caption{Important Video.} 
+\\end{figure}" )
+)
+```
+
+
+
