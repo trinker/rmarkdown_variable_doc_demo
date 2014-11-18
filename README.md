@@ -1,7 +1,7 @@
 rmarkdown: Alter Action Depending on Document
 ===========================
 
-This repo is designed to accompany this blog post that explains how to accomplish this wish:
+This repo is designed to accompany [this blog post](http://trinkerrstuff.wordpress.com/2014/11/18/rmarkdown-alter-action-depending-on-document/) that explains how to accomplish this wish:
 
 > "I wish I could do X for document type A and Y for document type B"
 
